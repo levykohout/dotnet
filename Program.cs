@@ -67,6 +67,44 @@ vegetables.Add("carrot");
 food.AddRange(vegetables);
 Console.WriteLine(food.Count);
 
+//dictionary
+Dictionary<string, long> phonebook = new Dictionary<string, long>();
+phonebook.Add("Alex", 4154346543);
+phonebook["Jessica"] = 4159484588;
+
+//check if dictionary contains key
+if (phonebook.ContainsKey("Alex"))
+{
+    Console.WriteLine("Alex's number is " + phonebook["Alex"]);
+}
+
+//removes item from dictionary
+phonebook.Remove("Jessica");
+Console.WriteLine(phonebook.Count);
+
+//string formatting
+int x = 1, y = 2;
+int sum = x + y;
+string sumCalculation = String.Format("{0} + {1} = {2}", x, y, sum);
+Console.WriteLine(sumCalculation);
+
+//substring
+string fullString = "full string";
+string partOfString = fullString.Substring(5);
+string shorterPart = fullString.Substring(5, 3);
+Console.WriteLine(partOfString);
+Console.WriteLine(shorterPart);
+
+//search and replace
+string name = "John Doe";
+string newName = name.Replace("John", "Eric");
+Console.WriteLine(newName);
+
+//indexof
+string fruit = "apple,orange,banana";
+Console.WriteLine("Found orange in position: " + fruit.IndexOf("orange"));
+Console.WriteLine("Found lemon in position: " + fruit.IndexOf("lemon"));
+
             string productName ="TV";
        int productYear = 2012;
        double productPrice = 279.99;
